@@ -1,0 +1,7 @@
+    axios.get('http://terriblytinytales.com/test.txt')
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });

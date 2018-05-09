@@ -1,6 +1,6 @@
 <template>
   <div id="hello">
-    <h1><i>ttt intern test</i></h1>
+
         <div id="background-container" class="background-container">
             <div id="background-output" class="background-output">
                   <flat-surface-shader class="shader"
@@ -10,10 +10,11 @@
             </div>
 
         </div>
-		
+		    <h1><i>ttt intern test</i></h1>
 		<div class = "content"  v-show="sub">
+    
       <h2>Enter N: </h2>
-        <el-input-number v-model="num1"  :min="1" :max="10"></el-input-number>
+        <el-input-number v-model="num1"  :min="1" ></el-input-number>
         <br>
         <br>
           <el-button round :loading="yo" size:medium v-on:click='getit' native-type=submit>Check top N Word frequencies</el-button>
@@ -35,16 +36,7 @@
 <script>
 import axios from "axios";
 
-var titles = [
-  {
-    prop: "word",
-    label: "Word"
-  },
-  {
-    prop: "count",
-    label: "no. of occurence"
-  }
-];
+var datares;
 
 export default {
   name: "hello",
@@ -54,7 +46,7 @@ export default {
       num1: "",
       sub: true,
       restable: false,
-      data: [{"word":"I","count":27},{"word":"a","count":24},{"word":"to","count":22},{"word":"at","count":15},{"word":"can","count":15}],
+      data:[{}],
       yo: false,
       titles: [
         {
@@ -72,18 +64,22 @@ export default {
     getit: function() {
       this.yo = true;
       var url = "https://intttern.azurewebsites.net/api/test?n=" + this.num1;
-      axios
-        .get(url, { headers: { "Access-Control-Allow-Origin": "*" } })
-        .then(function(response) {
-          console.log(response);
-/*           this.data = response.data; */
 
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+      axios
+        .get("https://interndev.azurewebsites.net/api/freq?n=" + this.num1)
+        .then(res => {
+          console.log(res.data);
+          this.data = res.data;
           this.restable = true;
           this.sub = false;
+        })
+        .catch(function(res) {
+          if (res instanceof Error) {
+            console.log(res.message);
+          } else {
+            console.log(res.data);
+          }
+        });
     }
   }
 };
@@ -91,7 +87,7 @@ export default {
 
 <style scoped>
 .background-container {
-  position: fixed;
+  position: relative;
   left: 0;
   right: 0;
   top: 0;
@@ -106,7 +102,7 @@ noindex:-o-prefocus,
   background: rgba(236, 234, 234, 0.5);
   padding: 40px 40px;
   margin: 0 auto;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   width: 30em;
@@ -116,5 +112,6 @@ noindex:-o-prefocus,
   border: 1px solid #ccc;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 </style>
 
