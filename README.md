@@ -1,6 +1,13 @@
 # tttinternweb
 
-> ttt Intern test
+## Working
+
+this repo contains files of ```Vue``` of frontend to take input n and serve a table of top n words.  
+  
+also repo/Azure-function consists a serverless nodejs functions that downloads  
+the txt file. calculates a word frequency and returns a json with sorted top n words.  
+
+repo/app consists minified vue build files with a nodejs express server to host the website.  
 
 ## Build Setup
 
