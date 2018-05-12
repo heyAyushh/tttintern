@@ -28,6 +28,28 @@ This is the serverless Http triggered code.
 
 Backend of the website of was made using ```Express``` module that serves a static website.
 
+## Testcases
+
+### n=1
+![Input](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase1.png "n=1")
+
+res
+![response](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase1res.png "n=1")
+api res
+![API](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcaseapi1.png "n=1")
+
+## n=2 
+api res
+![API](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase2api.png "n=2")
+2 res
+![input = 2 response](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase2res.png "n=2")
+
+## n=12
+12 api
+![API](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase12api.png "n=12")
+12 res
+![response n = 12](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase12res.png "n=12")
+
 ## Build Setup
 
 ``` bash
