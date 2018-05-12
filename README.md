@@ -33,22 +33,22 @@ Backend of the website of was made using ```Express``` module that serves a stat
 ### n=1
 ![Input](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase1.png "n=1")
 
-res
+response of website
 ![response](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase1res.png "n=1")
-api res
+reponse of API
 ![API](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcaseapi1.png "n=1")
 
 ## n=2 
-api res
-![API](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase2api.png "n=2")
-2 res
+response of website
 ![input = 2 response](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase2res.png "n=2")
+reponse of API
+![API](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase2api.png "n=2")
 
 ## n=12
-12 api
-![API](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase12api.png "n=12")
-12 res
+response of website
 ![response n = 12](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase12res.png "n=12")
+reponse of API
+![API](https://github.com/heyAyushh/tttintern/blob/master/screenshots/testcase12api.png "n=12")
 
 ## Build Setup
 
